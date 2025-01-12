@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "main": "deno run --env --allow-read --allow-env --allow-net=customsearch.googleapis.com,api.openai.com,34.84.79.136,34.84.187.217 features/main.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert",
+    "sqlite": "https://deno.land/x/sqlite/mod.ts",
+    "zod": "https://deno.land/x/zod@v3.23.8/mod.ts",
+    "prompt-parser": "npm:simple-prompt-executer",
+    "openai": "https://deno.land/x/openai@v4.67.1/mod.ts",
+    "googleapis": "npm:googleapis",
+    "jsonwebtoken": "npm:jsonwebtoken@9.0.2",
+    "csv": "jsr:@vslinko/csv",
+    "postgres": "https://deno.land/x/postgres/mod.ts"
+  },
+  "nodeModulesDir": true
+}
