@@ -4,7 +4,7 @@ import { AiService } from "../src/modules/ai/ai.service.ts";
 import { queryDatabaseTool } from "../src/modules/ai/tools/db-query.tool.ts";
 import { getGoogleSearchResultTool } from "../src/modules/ai/tools/google-search.tool.ts";
 import { getImageSummaryTool } from "../src/modules/ai/tools/image-summary.tool.ts";
-import { lkSchema, pcSchema } from "./schema.ts";
+import { schema } from "./schema.ts";
 
 const main = async (messages?: ChatCompletionMessageParam[]) => {
   const aiService = inject(AiService);
@@ -23,7 +23,7 @@ const main = async (messages?: ChatCompletionMessageParam[]) => {
           content: `あなたはデータ分析のプロです。ユーザーが求めたクエリを書いて、実行してください。
 エラーが発生した場合はエラー内容を修正してください。
 以下のスキーマを参考にしてください。
-${lkSchema}
+${schema}
 
 テーブル名やカラム名は snake_case です。`,
         },
